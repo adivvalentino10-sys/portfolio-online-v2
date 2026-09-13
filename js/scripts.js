@@ -51,8 +51,6 @@ window.addEventListener('DOMContentLoaded', event => {
         });
     });
 
-<<<<<<< HEAD
-=======
     // Project image modal for desktop and mobile
     const projectModal = document.getElementById('projectModal');
     const projectModalImage = projectModal ? projectModal.querySelector('.image-modal-image') : null;
@@ -97,6 +95,4 @@ window.addEventListener('DOMContentLoaded', event => {
             }
         });
     }
-
->>>>>>> c764d7b (Initial portfolio commit)
 });
