@@ -51,4 +51,52 @@ window.addEventListener('DOMContentLoaded', event => {
         });
     });
 
+<<<<<<< HEAD
+=======
+    // Project image modal for desktop and mobile
+    const projectModal = document.getElementById('projectModal');
+    const projectModalImage = projectModal ? projectModal.querySelector('.image-modal-image') : null;
+    const projectModalClose = projectModal ? projectModal.querySelector('.image-modal-close') : null;
+
+    if (projectModal && projectModalImage && projectModalClose) {
+        const openProjectModal = (link) => {
+            const previewImage = link.querySelector('img');
+            if (!previewImage) return;
+
+            projectModalImage.src = link.getAttribute('href');
+            projectModalImage.alt = previewImage.getAttribute('alt') || 'Project preview';
+            projectModal.classList.add('is-open');
+            projectModal.setAttribute('aria-hidden', 'false');
+            document.body.classList.add('modal-open');
+        };
+
+        const closeProjectModal = () => {
+            projectModal.classList.remove('is-open');
+            projectModal.setAttribute('aria-hidden', 'true');
+            document.body.classList.remove('modal-open');
+        };
+
+        document.querySelectorAll('.project-image-link').forEach((link) => {
+            link.addEventListener('click', (event) => {
+                event.preventDefault();
+                openProjectModal(link);
+            });
+        });
+
+        projectModalClose.addEventListener('click', closeProjectModal);
+
+        projectModal.addEventListener('click', (event) => {
+            if (event.target === projectModal) {
+                closeProjectModal();
+            }
+        });
+
+        document.addEventListener('keydown', (event) => {
+            if (event.key === 'Escape' && projectModal.classList.contains('is-open')) {
+                closeProjectModal();
+            }
+        });
+    }
+
+>>>>>>> c764d7b (Initial portfolio commit)
 });
