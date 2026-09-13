@@ -307,7 +307,7 @@ p {
 
 .about-grid {
   display: grid;
-  grid-template-columns: 1.2fr 0.8fr;
+  grid-template-columns: 1fr;
   gap: 34px;
   align-items: center;
 }
@@ -337,19 +337,6 @@ p {
   background: rgba(255,255,255,0.02);
   color: var(--text);
   font-size: 0.83rem;
-}
-
-.about-visual {
-  background: rgba(17, 25, 35, 0.9);
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  padding: 18px;
-  box-shadow: 0 20px 40px var(--shadow);
-}
-
-.about-visual img {
-  width: 100%;
-  border-radius: 16px;
 }
 
 .experience-card {
